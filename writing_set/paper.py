@@ -1,10 +1,13 @@
 class Sheet:
 
-    def __innit__(self):
-	    self.__content = None
+    __content = None
 
     def get_content(self):
-	    return self.__content
-		
+        return self.__content
+        
     def write_down(self, inputString):
-	    self.__content = inputString
+        
+        if self.__content is None:
+            self.__content = inputString
+        else:
+            self.__content += inputString
